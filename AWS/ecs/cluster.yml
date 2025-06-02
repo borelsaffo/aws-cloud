@@ -1,0 +1,5 @@
+aws s3api put-bucket-versioning --bucket borel1 --versioning-configuration Status=Enabled
+aws eks create😋-cluster --region us-east-1 --name EKS --kubernetes-version 1.24
+kops create cluster --name EKS --zones us-east-1 --yes
+aws s3 mb borel1
+aws iam create-role --role-name eksClusterRole --assume-role-policy-document file://"cluster-trust-policy.json"
